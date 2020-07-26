@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);@import url(https://fonts.googleapis.com/css2?family=Mulish:wght@300;
+
+500;600;700&display=swap);* {
   box-sizing: border-box;
 }
 
@@ -139,6 +141,105 @@ table {
   border-spacing: 0;
 }
 
+#aboutPage {
+  padding: 100px;
+}
+
+#aboutPage .contentBox {
+  background-color: white;
+  padding: 20px;
+}
+
+#aboutPage .contentBox h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+#aboutPage .contentBox p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.welcomeJumbo {
+  max-width: calc(100vw - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  background: #ed1b2e;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed1b2e 1%, #333333 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  overflow: hidden;
+}
+
+.welcomeJumbo .titleInfo {
+  margin-bottom: 100px;
+}
+
+.welcomeJumbo .titleInfo .sectionTitle {
+  color: #f2f2f2;
+  align-self: center;
+}
+
+.welcomeJumbo .titleInfo .city {
+  align-self: center;
+  background: #f2f2f2;
+  padding: 8px 15px;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.welcomeJumbo .burgerFries {
+  width: 100%;
+  max-width: 800px;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+p {
+  font-family: "Mulish", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 * .container {
   width: 100%;
   max-width: 1130px;
@@ -163,33 +264,33 @@ table {
   font-weight: 900;
 }
 
-#welcome {
+#appLayout {
   display: grid;
   grid-template-columns: 300px 1fr;
 }
 
-#welcome .welcomeMenu {
+#appLayout .sideMenu {
   padding: 20px;
   height: 100vh;
   position: relative;
   background: white;
 }
 
-#welcome .welcomeMenu .logo {
+#appLayout .sideMenu .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 35px;
 }
 
-#welcome .welcomeMenu img {
+#appLayout .sideMenu img {
   max-width: 100px;
 }
 
-#welcome .welcomeMenu .menu {
+#appLayout .sideMenu .menu {
   margin-bottom: 50px;
 }
 
-#welcome .welcomeMenu .menu .links li a {
+#appLayout .sideMenu .menu .links li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #333333;
@@ -199,15 +300,15 @@ table {
   transition: color 0.3s ease-in-out;
 }
 
-#welcome .welcomeMenu .menu .links li a:hover {
+#appLayout .sideMenu .menu .links li a:hover {
   color: #e01d2b;
 }
 
-#welcome .welcomeMenu .socialIcons {
+#appLayout .sideMenu .socialIcons {
   display: flex;
 }
 
-#welcome .welcomeMenu .socialIcons a {
+#appLayout .sideMenu .socialIcons a {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -222,43 +323,38 @@ table {
   transition: background 0.3s ease-in-out;
 }
 
-#welcome .welcomeMenu .socialIcons a:hover {
+#appLayout .sideMenu .socialIcons a:hover {
   background: #333333;
 }
 
-#welcome .welcomeMenu .location {
+#appLayout .sideMenu .location {
   position: absolute;
   bottom: 0;
   padding: 0 0 15px;
 }
 
-#welcome .welcomeMenu .location .address {
+#appLayout .sideMenu .location .address {
   color: #d1535c;
   line-height: 1.5;
   margin-bottom: 15px;
 }
 
-#welcome .welcomeMenu .location .contactNumber {
+#appLayout .sideMenu .location .contactNumber {
   margin-bottom: 10px;
 }
 
-#welcome .welcomeMenu .location .contactNumber a {
+#appLayout .sideMenu .location .contactNumber a {
   text-decoration: none;
   font-size: 1.2rem;
   color: #0077ff;
 }
 
-#welcome .welcomeMenu .location .operations {
+#appLayout .sideMenu .location .operations {
   color: #d1535c;
 }
 
-#welcome .welcomeJumbo {
+#appLayout #contentSection {
   max-width: calc(100vw - 300px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-width: 100%;
   background: #ed1b2e;
   /* Old browsers */
   /* FF3.6-15 */
@@ -266,30 +362,6 @@ table {
   background: radial-gradient(ellipse at center, #ed1b2e 1%, #333333 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   overflow: hidden;
-}
-
-#welcome .welcomeJumbo .titleInfo {
-  margin-bottom: 100px;
-}
-
-#welcome .welcomeJumbo .titleInfo .sectionTitle {
-  color: #f2f2f2;
-  align-self: center;
-}
-
-#welcome .welcomeJumbo .titleInfo .city {
-  align-self: center;
-  background: #f2f2f2;
-  padding: 8px 15px;
-  display: inline-block;
-  border-radius: 3px;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-#welcome .welcomeJumbo .burgerFries {
-  width: 100%;
-  max-width: 800px;
 }
 
 #infoSection {
@@ -516,37 +588,5 @@ table {
 #menuSection .container .foodSlider .slide .content .foodImg img {
   max-width: 125px;
   width: 95%;
-}
-
-body {
-  line-height: 1;
-  background: white;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 

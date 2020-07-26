@@ -1,5 +1,5 @@
 
-            <div class="welcomeMenu">
+            <div class="sideMenu">
               <a href="/" class="logo">
                 <img src="/img/tonys_logo.png" alt="Tonys">
               </a>
