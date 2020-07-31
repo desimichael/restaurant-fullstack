@@ -8,7 +8,7 @@
   <div class="contentBox">
     <div class="row">
       <div class="col-md-6">       
-        <h1>About Us..</h1>
+        <div class="title">About us..</div>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, ab? Vero error magni architecto explicabo dolore? Repudiandae voluptatem veritatis ratione libero nam, deleniti ab neque tenetur, unde aut impedit fuga distinctio beatae asperiores exercitationem qui, culpa.</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, ab? Vero error magni architecto explicabo dolore? Repudiandae voluptatem veritatis ratione libero nam, deleniti ab neque tenetur, unde aut impedit fuga distinctio beatae asperiores exercitationem qui, culpa.</p>
       </div>

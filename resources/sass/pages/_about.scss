@@ -3,11 +3,8 @@
 	.contentBox {
 		background-color: white;
 		padding: 20px;
-		h1 {
-			font-size: 3rem;
-			font-weight: 700;
-			color: black;
-			margin-bottom: 2rem;
+		.title {
+			text-align: start;
 		}
 		p {
 			font-size: 1rem;
@@ -16,4 +13,24 @@
 			margin-bottom: 2rem;
 		}
 	}
+}
+
+// Small devices
+@media (min-width: 0px) and (max-width: 767px) {
+	#aboutPaage {
+		padding: 20px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 992px) {
+	#aboutPaage {
+		padding: 20px;
+	}
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

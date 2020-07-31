@@ -10,7 +10,6 @@
           <div class="title">
             Groups & Parties
           </div>
-          <div class="infoContainer">
             <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, deleniti. Enim amet accusantium provident non voluptatibus saepe nisi quas ea excepturi incidunt? A impedit eaque aut nihil nemo blanditiis voluptatem!
             </p>
@@ -20,7 +19,6 @@
                 <i class="fas fa-chevron-right"></i>
               </div>
             </a>
-          </div>
         </div>
         <div class="iBox">
           <div class="title">
@@ -58,8 +56,8 @@
     </div>
   </section>
   <section id="happeningsSection">
-    <h2 class="sectionTitle">Happenings</h2>
     <div class="container"> 
+    <h2 class="sectionTitle">Happenings</h2>
       <div class="happeningsGrid">
         <div class="happeningsBox">
           <img src="/img/happenings_event1.png" alt="poster">
@@ -82,8 +80,8 @@
       </div>
     </div>
   </section>
-  <section id="menuSection">
-    <h2 class="sectionTitle">Sports and Great Eats!!</h2>
+  <section id="foodPreview">
+    <h1 class="sectionTitle">Sports and Great Eats!!</h1>
     <div class="roundedBtn">
       View Menu
     </div>

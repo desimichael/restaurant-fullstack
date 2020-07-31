@@ -150,11 +150,8 @@ table {
   padding: 20px;
 }
 
-#aboutPage .contentBox h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: black;
-  margin-bottom: 2rem;
+#aboutPage .contentBox .title {
+  text-align: start;
 }
 
 #aboutPage .contentBox p {
@@ -164,13 +161,25 @@ table {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  #aboutPaage {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #aboutPaage {
+    padding: 20px;
+  }
+}
+
 .welcomeJumbo {
-  max-width: calc(100vw - 300px);
+  transform: translate3d(250px, 0, 0);
+  max-width: calc(100vw - 250px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
   background: #ed1b2e;
   /* Old browsers */
   /* FF3.6-15 */
@@ -241,8 +250,9 @@ body {
 }
 
 * .container {
-  width: 100%;
-  max-width: 1130px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 * .sectionTitle {
@@ -266,19 +276,20 @@ body {
 
 #appLayout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  width: 100%;
+  height: 100vh;
 }
 
 #appLayout .sideMenu {
-  padding: 20px;
+  padding: 40px;
   height: 100vh;
-  position: relative;
+  width: 300px;
+  position: absolute;
   background: white;
 }
 
 #appLayout .sideMenu .logo {
   display: flex;
-  justify-content: center;
   margin-bottom: 35px;
 }
 
@@ -354,7 +365,8 @@ body {
 }
 
 #appLayout #contentSection {
-  max-width: calc(100vw - 300px);
+  transform: translate3d(250px, 0, 0);
+  max-width: calc(100vw - 250px);
   background: #ed1b2e;
   /* Old browsers */
   /* FF3.6-15 */
@@ -367,47 +379,43 @@ body {
 #infoSection {
   background-color: #333333;
   color: #fbfbfb;
-  padding: 100px;
 }
 
 #infoSection .container {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 100px 0;
 }
 
 #infoSection .container .infoGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
 }
 
-#infoSection .container .infoGrid .iBox .infoContainer {
-  max-width: 350px;
-  margin: 0 auto;
-}
-
-#infoSection .container .infoGrid .iBox .infoContainer .paragraph {
+#infoSection .container .infoGrid .iBox .paragraph {
+  padding: 10px;
   text-align: center;
   line-height: 1.5;
-  margin-bottom: 10px;
 }
 
-#infoSection .container .infoGrid .iBox .infoContainer .learnMore {
+#infoSection .container .infoGrid .iBox .learnMore {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #fbfbfb;
   text-decoration: none;
 }
 
-#infoSection .container .infoGrid .iBox .infoContainer .learnMore span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#infoSection .container .infoGrid .iBox .learnMore span {
+  text-transform: uppercase;
   margin-right: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-#infoSection .container .infoGrid .iBox .infoContainer .learnMore .circleRight {
+#infoSection .container .infoGrid .iBox .learnMore .circleRight {
   height: 30px;
   width: 30px;
   /* FF3.6-15 */
@@ -420,40 +428,51 @@ body {
   align-items: center;
 }
 
-#infoSection .container .infoGrid .iBox .infoContainer .learnMore .circleRight .fa-chevron-right {
+#infoSection .container .infoGrid .iBox .learnMore .circleRight .fa-chevron-right {
   color: #fbfbfb;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore:hover .circleRight {
+  margin-left: 10px;
 }
 
 #happeningsSection {
   padding: 100px 0;
+}
+
+#happeningsSection .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#happeningsSection .happeningsGrid {
+#happeningsSection .container .sectionTitle {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#happeningsSection .container .happeningsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-  row-gap: 30px;
+  gap: 60px;
   z-index: 100;
 }
 
-#happeningsSection .happeningsGrid .happeningsBox {
+#happeningsSection .container .happeningsGrid .happeningsBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 300px;
+  width: 300px;
 }
 
-#happeningsSection .happeningsGrid .happeningsBox img {
+#happeningsSection .container .happeningsGrid .happeningsBox img {
   height: 100%;
   width: 100%;
 }
 
-#menuSection {
+#foodPreview {
   background: #f4ebeb;
   padding: 100px 0;
   display: flex;
@@ -462,32 +481,33 @@ body {
   flex-direction: column;
 }
 
-#menuSection .roundedBtn {
+#foodPreview .roundedBtn {
   background: #ed1b2e;
   color: #f2f2f2;
   padding: 15px;
   display: inline-block;
   border-radius: 30px;
-  margin: 70px 0 150px 0;
+  margin-bottom: 130px;
   transition: background 0.3s ease-in-out;
   cursor: pointer;
 }
 
-#menuSection .roundedBtn:hover {
+#foodPreview .roundedBtn:hover {
   background: #333333;
 }
 
-#menuSection .container {
+#foodPreview .container {
+  width: 100%;
   position: relative;
 }
 
-#menuSection .container .leftBtn,
-#menuSection .container .rightBtn {
+#foodPreview .container .leftBtn,
+#foodPreview .container .rightBtn {
   background: #e01d2b;
   color: #f2f2f2;
-  height: 40px;
-  width: 40px;
-  top: 50%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
   top: calc(50% - 25px);
   display: inline-block;
   z-index: 5;
@@ -495,61 +515,62 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  position: absolute;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-#menuSection .container .leftBtn:hover,
-#menuSection .container .rightBtn:hover {
+#foodPreview .container .leftBtn:hover,
+#foodPreview .container .rightBtn:hover {
   background: #f2f2f2;
   border: 2px solid #e01d2b;
   color: #e01d2b;
 }
 
-#menuSection .container .leftBtn {
-  left: -15px;
+#foodPreview .container .leftBtn {
+  left: -10px;
 }
 
-#menuSection .container .rightBtn {
-  right: -15px;
+#foodPreview .container .rightBtn {
+  right: -10px;
 }
 
-#menuSection .container .foodSlider {
-  font-size: 0;
-  overflow: hidden;
+#foodPreview .container .foodSlider {
   width: 100%;
+  font-size: 0;
   max-width: 1300px;
+  overflow: hidden;
+  position: relative;
 }
 
-#menuSection .container .foodSlider .slidingSystem {
+#foodPreview .container .foodSlider .slidingSystem {
   white-space: nowrap;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0%, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
-#menuSection .container .foodSlider .slide {
+#foodPreview .container .foodSlider .slide {
   width: 20%;
   height: 400px;
   position: relative;
   display: inline-block;
   white-space: normal;
-}
-
-#menuSection .container .foodSlider .slide:hover {
   cursor: pointer;
 }
 
-#menuSection .container .foodSlider .slide:hover .background {
+#foodPreview .container .foodSlider .slide:hover .background {
   background: #0685ac;
   transform: translate3d(0, -200px, 0);
 }
 
-#menuSection .container .foodSlider .slide:hover .content .foodTitle,
-#menuSection .container .foodSlider .slide:hover .content .foodDesc {
-  color: #f2f2f2;
+#foodPreview .container .foodSlider .slide:hover .content .foodTitle {
+  color: #f4ebeb;
 }
 
-#menuSection .container .foodSlider .slide .background {
+#foodPreview .container .foodSlider .slide:hover .content .foodDesc {
+  color: #f4ebeb;
+}
+
+#foodPreview .container .foodSlider .slide .background {
   background: white;
   height: 100%;
   width: 100%;
@@ -560,7 +581,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-#menuSection .container .foodSlider .slide .content {
+#foodPreview .container .foodSlider .slide .content {
   position: absolute;
   z-index: 2;
   padding: 20px;
@@ -568,25 +589,210 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
-#menuSection .container .foodSlider .slide .content .foodTitle {
+#foodPreview .container .foodSlider .slide .content .foodTitle {
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 2rem;
   color: #ed1b2e;
 }
 
-#menuSection .container .foodSlider .slide .content .foodDesc {
+#foodPreview .container .foodSlider .slide .content .foodDesc {
   font-weight: 300;
   line-height: 1.3;
   font-size: 0.8rem;
   margin-bottom: 3rem;
 }
 
-#menuSection .container .foodSlider .slide .content .foodImg img {
+#foodPreview .container .foodSlider .slide .content img {
   max-width: 125px;
   width: 95%;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .container .infoGrid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  #infoSection .container .infoGrid .iBox .title {
+    font-size: 2rem;
+  }
+
+  #infoSection .container .infoGrid .iBox p {
+    font-size: 0.8rem;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore span {
+    font-size: 0.9rem;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore .circleRight {
+    height: 25px;
+    width: 25px;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore .circleRight i {
+    font-size: 0.9rem;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 80%;
+    width: 80%;
+  }
+
+  #foodPreview {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  #foodPreview .sectionTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #foodPreview .container .foodSlider .slide {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .container .infoGrid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 80%;
+    width: 80%;
+  }
+
+  #foodPreview {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  #foodPreview .sectionTitle {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+
+  #foodPreview .container .foodSlider .slide {
+    width: 50%;
+  }
 }
 
