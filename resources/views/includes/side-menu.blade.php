@@ -13,10 +13,7 @@
                   </li>
                   <li>
                     <a href="/events">Events</a>
-                  </li>
-                  <li>
-                    <a href="/hookahs">Hookahs</a>
-                  </li>    
+                  </li>   
                   <li>
                     <a href="/waitlist">Waitlist</a>
                   </li>    

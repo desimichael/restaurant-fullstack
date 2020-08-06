@@ -3,6 +3,8 @@
 @import "reset";
 @import "pages/about";
 @import "pages/waitlist";
+@import "pages/events";
+@import "menu/index";
 @import "home";
 
 body {
@@ -167,7 +169,6 @@ body {
 			#ed1b2e 1%,
 			#333333 100%
 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		overflow: hidden;
 	}
 }
 #infoSection {
@@ -386,7 +387,7 @@ body {
 }
 .contentBox {
 	background-color: white;
-	padding: 50px;
+	padding: 20px;
 }
 
 // Small devices
@@ -636,7 +637,7 @@ body {
 			}
 		}
 	}
-	
+
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {

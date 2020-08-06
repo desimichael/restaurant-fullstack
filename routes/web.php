@@ -28,9 +28,6 @@ Route::get('/contact', function () {
 Route::get('/events', function () {
     return view('pages/events');
 });
-Route::get('/hookahs', function () {
-    return view('pages/hookahs');
-});
 Route::get('/waitlist', function () {
     return view('pages/waitlist');
 });
