@@ -145,16 +145,7 @@ table {
   padding: 100px;
 }
 
-#aboutPage .contentBox {
-  background-color: white;
-  padding: 20px;
-}
-
-#aboutPage .contentBox .title {
-  text-align: start;
-}
-
-#aboutPage .contentBox p {
+#aboutPage p {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 300;
@@ -162,14 +153,63 @@ table {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  #aboutPaage {
+  #aboutPage {
     padding: 20px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  #aboutPaage {
+  #aboutPage {
     padding: 20px;
+  }
+}
+
+#waitlistPage {
+  padding: 50px;
+}
+
+#waitlistPage .title {
+  text-align: start;
+}
+
+#waitlistPage p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+#waitlistPage form .form-group label {
+  font-weight: 700;
+  color: #000;
+}
+
+#waitlistPage form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #000;
+  font-size: 1.2rem;
+  height: auto;
+}
+
+#waitlistPage form .form-group button[type=submit] {
+  background: #000;
+  padding: 10px 25px;
+  border: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #waitlistPage {
+    padding: 50px;
+  }
+
+  #waitlistPage .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #waitlistPage {
+    padding: 50px;
   }
 }
 
@@ -249,10 +289,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 * .container {
   width: 90%;
   max-width: 1100px;
-  margin: auto;
 }
 
 * .sectionTitle {
@@ -265,12 +308,12 @@ body {
 * .title {
   margin-bottom: 15px;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 * .subtitle {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 900;
 }
 
@@ -290,6 +333,7 @@ body {
 
 #appLayout .sideMenu .logo {
   display: flex;
+  justify-content: start;
   margin-bottom: 35px;
 }
 
@@ -385,7 +429,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  padding: 100px 0;
+  padding: 100px;
 }
 
 #infoSection .container .infoGrid {
@@ -437,7 +481,7 @@ body {
 }
 
 #happeningsSection {
-  padding: 100px 0;
+  padding: 100px;
 }
 
 #happeningsSection .container {
@@ -474,7 +518,7 @@ body {
 
 #foodPreview {
   background: #f4ebeb;
-  padding: 100px 0;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,8 +549,8 @@ body {
 #foodPreview .container .rightBtn {
   background: #e01d2b;
   color: #f2f2f2;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   top: calc(50% - 25px);
   display: inline-block;
@@ -610,6 +654,11 @@ body {
   width: 95%;
 }
 
+.contentBox {
+  background-color: white;
+  padding: 50px;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   #appLayout .sectionTitle {
     font-size: 3rem;
@@ -632,6 +681,7 @@ body {
     width: 100%;
     max-width: 100vw;
     padding: 15px;
+    overflow-y: scroll;
     transform: translate3d(0, 0, 0);
   }
 
@@ -681,7 +731,7 @@ body {
   #happeningsSection .container .happeningsGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 100px;
     z-index: 100;
   }
 
@@ -735,6 +785,7 @@ body {
     width: 100%;
     max-width: 100vw;
     padding: 15px;
+    overflow-y: scroll;
     transform: translate3d(0, 0, 0);
   }
 
@@ -763,7 +814,7 @@ body {
   #happeningsSection .container .happeningsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 100px;
     z-index: 100;
   }
 
@@ -774,8 +825,8 @@ body {
   }
 
   #happeningsSection .container .happeningsGrid .happeningsBox img {
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
   }
 
   #foodPreview {
@@ -793,6 +844,75 @@ body {
 
   #foodPreview .container .foodSlider .slide {
     width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .title {
+    font-size: 1.7rem;
+  }
+
+  #infoSection p {
+    font-size: 0.9rem;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 100%;
+    width: 100%;
   }
 }
 
