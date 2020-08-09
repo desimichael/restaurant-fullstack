@@ -5,6 +5,7 @@
 @import "pages/waitlist";
 @import "pages/events";
 @import "menu/index";
+@import "menu/single-menu";
 @import "home";
 
 body {
@@ -61,7 +62,7 @@ body {
 		font-weight: 700;
 	}
 	.subtitle {
-		font-size: 1.7rem;
+		font-size: 1.3rem;
 		font-weight: 900;
 	}
 }

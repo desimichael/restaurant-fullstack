@@ -307,6 +307,45 @@ table {
   }
 }
 
+#singleMenuPage {
+  padding: 50px;
+}
+
+#singleMenuPage .title {
+  margin-bottom: 2rem;
+}
+
+#singleMenuPage .item {
+  margin-bottom: 2rem;
+}
+
+#singleMenuPage .item .subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+#singleMenuPage .item .subtitle h5,
+#singleMenuPage .item .subtitle .price {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#singleMenuPage .item .description {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #singleMenuPage {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #singleMenuPage {
+    padding: 20px;
+  }
+}
+
 .welcomeJumbo {
   transform: translate3d(250px, 0, 0);
   max-width: calc(100vw - 250px);
@@ -407,7 +446,7 @@ body {
 }
 
 * .subtitle {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 900;
 }
 
